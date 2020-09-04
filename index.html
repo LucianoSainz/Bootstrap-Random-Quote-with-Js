@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote</title>  
+    <title>Random Quote</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-   
+   <div class="container">
+       <div class="row py-5">
+      <div class="col-md-6 offset-md-3">
     <wrapper id="quote-box">
-        <div id="text"></div>
-        <div id="author"></div>
-            <a class="button" id="tweet-quote" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <button id="new-quote" onClick="generateQuote();">New Quote</button>
+        <div class="card">
+          <div class="card-header text-center text-white bg-primary">
+            Random Quote
+          </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                <div id="text"></div>  
+              </h5>
+              <p class="card-text">
+                <div id="author"></div>
+              </p>
+              
+              <a href="#"  id="tweet-quote" class ="btn btn-block btn-primary" target="_blank"><i class="fab fa-twitter mr-2" ></i>tweet</a>
+            
+            <button id="new-quote" onClick="generateQuote();" class="btn btn-block btn-success">New Quote</button>
+            </div>
+            <div class="card-footer bg-transparent text-center">Lucianosainz</div>
+          </div>
         </div>
+       
     </wrapper>
-   
+      </div>
+     </div>
+   </div>
+
+
+
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="https://kit.fontawesome.com/fcfe650fcd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
