@@ -12,7 +12,7 @@
       <div class="col-md-6 offset-md-3">
     <wrapper id="quote-box">
         <div class="card">
-          <div class="card-header text-center text-white bg-primary">
+          <div class="card-header text-center text-white bg-dark">
             Random Quote
           </div>
             <div class="card-body">
@@ -23,18 +23,21 @@
                 <div id="author"></div>
               </p>
               
-              <a href="#"  id="tweet-quote" class ="btn btn-block btn-primary" target="_blank"><i class="fab fa-twitter mr-2" ></i>tweet</a>
+              <a href="#"  id="tweet-quote" class ="btn btn-block btn-primary" target="_blank" onClick="counterClick();"><i class="fab fa-twitter mr-2" ></i>tweet</a>
             
             <button id="new-quote" onClick="generateQuote();" class="btn btn-block btn-success">New Quote</button>
             </div>
-            <div class="card-footer bg-transparent text-center">Lucianosainz</div>
+            
+            <div class="card-footer bg-dark text-center">
+            <div class="nummber text-center text-white">Number of times tweeted</div>
+            <div id="couting" class="count text-center text-white"></div>
+            </div>
           </div>
         </div>
-       
     </wrapper>
       </div>
      </div>
-   </div>
+   
 
 
 

@@ -21,10 +21,13 @@ function init() {
 
 
 
+
 function generateQuote() {
+  
    let quoteSize = QUOTEBANK.length;
    let randomIndex = Math.floor(Math.random() * quoteSize);
    let randomQuoteData = QUOTEBANK[randomIndex];
+
 
    let twitterLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
 
@@ -33,12 +36,31 @@ function generateQuote() {
 
     let authorInApiFormat = randomQuoteData.author.replace(/ /g, "%20");
     twitterLink += " - " + authorInApiFormat;
-
+   
+    
     document.getElementById("tweet-quote").href = twitterLink;
     document.getElementById("text").innerText = randomQuoteData.quote;
-    document.getElementById("author").innerText = randomQuoteData.author;
+    document.getElementById("author").innerText = randomQuoteData.author;  
 }
+ 
 
+
+//-------------------------tweet counter localStorage---------------------------//
+
+let counter = 0;
+
+function counterClick(){ 
+    //document.getElementById('couting').innerHTML = counter += 1;
+    if(typeof(Storage) !== 0) {
+      if (localStorage.counter) {
+        localStorage.counter = Number(localStorage.counter)+1;
+      } else {
+        localStorage.counter = 1;
+      }
+      document.getElementById("couting").innerHTML = localStorage.counter
+}
+//localStorage.clear();
+}
 
 
 
@@ -182,7 +204,7 @@ const QUOTEBANK = [
            "quote":"Start where you are. Use what you have.  Do what you can.",
            "author":"Arthur Ashe"},
     {
-           "quote":"When I was 5 years old, my mother always told me that happiness was the key to life.  When I went to school, they asked me what I wanted to be when I grew up.  I wrote down ‘happy’.  They told me I didn’t understand the assignment, and I told them they didn’t understand life.",
+           "quote":"When I was 5 years old, my mother always told me that happiness was the key to life.",
            "author":"John Lennon"},
     {
            "quote":"Fall seven times and stand up eight.",
